@@ -1,16 +1,18 @@
 # do_sms
 
-A new Flutter application.
+A Simple utility flutter application to send messages to a number based on HTTP Requests.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Install the flutter app.
+Connect to the network where the client can send HTTP Request to the app.
+Click GetIP button to see IP of Mobile on that Network.
+Send Request as-
 
-A few resources to get you started if this is your first Flutter project:
+http://local.ip:4444/?num=the_number_where_you_want_to_send_sms&body=the_body_you_want_to_send
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+**Num must be prefixed with country code without +**
+eg. 919999999999
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+**body should be less than 1000 chars.**
+Due to Path Limitations.

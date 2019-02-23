@@ -13,7 +13,7 @@ void main() {
           var queryParams = request.requestedUri.queryParameters;
           if (queryParams.containsKey("body") && queryParams.containsKey("num")) {
             SmsSender sender = new SmsSender();
-            SmsMessage message = new SmsMessage("+91" + queryParams["num"], queryParams["body"]);
+            SmsMessage message = new SmsMessage("+" + queryParams["num"], queryParams["body"]);
             sender.sendSms(message);
             request.response.write('ok');
           } else {
